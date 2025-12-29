@@ -1,0 +1,327 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #ffd6e8, #f3d9ff);
+  color: #ff2f92;
+  font-family: 'VT323', monospace;
+  text-align: center;
+  margin: 0;
+}
+
+/* MARQUEE = CUTE CHAOS */
+.marquee {
+  background: #ff2f92;
+  color: white;
+  padding: 10px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* INTRO */
+.intro h1 {
+  font-size: 60px;
+  margin-top: 50px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-size: 22px;
+  background: white;
+  color: #ff2f92;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* CARDS = ALBUM JACKET */
+.card {
+  background: white;
+  border-radius: 25px;
+  margin: 40px auto;
+  padding: 30px;
+  width: 85%;
+  max-width: 520px;
+  box-shadow: 0 12px 30px rgba(255, 47, 146, 0.25);
+  text-transform: uppercase;
+<div class="bar">
+  <span>CONFUSION</span>
+  <div class="progress">
+    <div class="fill" style="width: 85%;"></div>
+  </div>
+</div>
+
+}
+
+.card h2 {
+  font-size: 34px;
+  margin-bottom: 15px;
+}
+
+/* LEFT ALIGN LISTS (YES, STILL) */
+.card ul,
+.card ol {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.card li {
+  font-size: 22px;
+  margin: 6px 0;
+}
+
+/* BIG STAT */
+.big-text {
+  font-size: 72px;
+  font-weight: bold;
+  color: #ff2f92;
+}
+
+/* FLIP CARDS = CONFESSION CARDS */
+.flip-section {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 60px 0;
+}
+
+.flip-card {
+  width: 170px;
+  height: 110px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  backface-visibility: hidden;
+  padding: 10px;
+}
+
+.flip-front {
+  background: #ffe6f1;
+  color: #ff2f92;
+}
+
+.flip-back {
+  background: #ff2f92;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/* FINAL SECTION */
+.end {
+  margin: 80px 0;
+  text-transform: uppercase;
+}
+
+.end p {
+  font-size: 20px;
+  margin: 15px 0;
+}
+
+/* BUTTON = COMEBACK BUTTON */
+button {
+  background: #ff2f92;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  font-family: inherit;
+  font-size: 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 47, 146, 0.4);
+}
+
+button:hover {
+  background: #ff66b3;
+}
+
+/* FAKE BLINK (SOFT VERSION) */
+blink {
+  animation: blink 1.2s steps(1) infinite;
+  font-size: 32px;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* IMAGES */
+img {
+  max-width: 100%;
+  border-radius: 18px;
+  margin-top: 15px;
+}
+
+
+/* CORNER DECORATIONS */
+body::before,
+body::after {
+  content: "★ ♡ ✿";
+  position: fixed;
+  font-size: 28px;
+  color: rgba(255, 47, 146, 0.5);
+  z-index: 0;
+}
+
+body::before {
+  top: 15px;
+  left: 15px;
+}
+
+body::after {
+  bottom: 15px;
+  right: 15px;
+}
+
+/* FLOATING HEARTS */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: fixed;
+  bottom: -20px;
+  font-size: 20px;
+  color: #ff66b3;
+  animation: float 6s infinite;
+  z-index: 0;
+}
+
+.marquee {
+  border-radius: 0 0 20px 20px;
+}
+
+
+.subtitle::after {
+  content: " ✧";
+}
+
+section {
+  position: relative;
+  z-index: 1;
+}
+
+/* SLIDE STYLE SECTIONS */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.cursor-heart {
+  position: fixed;
+  font-size: 16px;
+  pointer-events: none;
+  color: #ff66b3;
+  animation: pop 1s forwards;
+  z-index: 999;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.bar {
+  width: 100%;
+  margin: 15px 0;
+  text-align: left;
+}
+
+.bar span {
+  font-size: 18px;
+}
+
+.progress {
+  background: #ffe6f1;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 18px;
+  margin-top: 5px;
+}
+
+.fill {
+  background: #ff2f92;
+  height: 100%;
+  border-radius: 20px;
+  animation: fillUp 2s ease forwards;
+}
+
+@keyframes fillUp {
+  from {
+    width: 0;
+  }
+}
+
+.side-images {
+  position: fixed;   /* stays in place while scrolling */
+  top: 50%;          /* start in the middle vertically */
+  right: 0;          /* or left: 0 for left side */
+  transform: translateY(-50%); /* center vertically */
+  display: flex;
+  flex-direction: column;  /* stack images vertically */
+  gap: 15px;               /* space between images */
+  z-index: 1000;           /* makes sure they’re on top */
+}
+
+.side-images.left {
+  left: 0;                /* left side */
+}
+
+.side-images.right {
+  right: 0;               /* right side */
+}
+
+.side-images img {
+  width: 80px;            /* size of images */
+  height: auto;
+  border-radius: 12px;    /* rounded corners */
+  transition: transform 0.3s;
+}
+
+.side-images img:hover {
+  transform: scale(1.2);  /* small zoom on hover */
+}
