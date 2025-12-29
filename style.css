@@ -308,20 +308,22 @@ section {
 }
 
 .side-images.left {
-  left: 0;                /* left side */
+  left: 25px;   /* gap from left edge */
 }
 
 .side-images.right {
-  right: 0;               /* right side */
+  right: 25px;  /* gap from right edge */
 }
 
+
 .side-images img {
-  width: 80px;            /* size of images */
+  width: 170px;
+  max-width: 18vw; /* responsive so it doesn’t explode on small screens */
   height: auto;
-  border-radius: 12px;    /* rounded corners */
-  transition: transform 0.3s;
 }
+
 
 .side-images img:hover {
   transform: scale(1.2);  /* small zoom on hover */
+
 }
