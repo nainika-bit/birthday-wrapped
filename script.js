@@ -15,14 +15,3 @@ document.addEventListener("mousemove", (e) => {
     heart.remove();
   }, 1000);
 });
-
-const buttons = document.querySelectorAll(".flip-btn");
-
-buttons.forEach(btn => {
-  btn.addEventListener("click", (e) => {
-    const card = e.target.closest(".flip-card");
-    card.classList.toggle("flipped");
-  });
-});
-
-
