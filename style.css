@@ -129,6 +129,7 @@ body {
   color: white;
   transform: rotateY(180deg);
 }
+  
 /* FINAL SECTION */
 .end {
   margin: 80px 0;
@@ -326,6 +327,7 @@ section {
   transform: scale(1.2);  /* small zoom on hover */
 
 }
+
 
 
 
